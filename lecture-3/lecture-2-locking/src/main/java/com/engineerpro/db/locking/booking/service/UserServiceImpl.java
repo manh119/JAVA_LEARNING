@@ -29,6 +29,10 @@ public class UserServiceImpl implements UserService {
   @Override
   public Booking optimisticBookRoom(int userId, int roomId) {
     // Implementation for optimistic locking booking
+    // 1. check if room is available
+    // 2. if available, create booking
+    // 3. update room as unavailable
+    // 4. return booking
     Room room = roomRepository.findOneByIdAndAvailable(roomId, true);
     if (room == null) {
       throw new IllegalStateException("Room is not available for booking");
