@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "RedisApplication",
+            "request": "launch",
+            "mainClass": "com.engineerpro.example.redis.RedisApplication",
+            "projectName": "redis-lecture-3-redis"
+        },
+        {
+            "type": "java",
+            "name": "Debug Spring Boot",
+            "request": "launch",
+            "mainClass": "com.engineerpro.db.locking.booking.BookingApplication",
+            "projectName": "lecture-2-locking"
+        }
+    ]
+}

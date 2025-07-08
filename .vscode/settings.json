@@ -1,0 +1,4 @@
+{
+    "java.completion.imports.enabled": true,
+    "java.configuration.updateBuildConfiguration": "automatic"
+}
