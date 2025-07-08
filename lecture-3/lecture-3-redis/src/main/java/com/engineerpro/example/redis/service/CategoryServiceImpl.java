@@ -70,6 +70,7 @@ public class CategoryServiceImpl implements CategoryService {
   @Override
   public void rateLimitedGetArticlesByIP(GetCategoryArticlesRequest request)
       throws CategoryNotFoundException, IOException {
+    // Rate limit by IP address
     String ip = request.getIpAddress();
     String key = "rate_limit:" + ip;
     int limit = 5; // max 5 requests
