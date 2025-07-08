@@ -22,6 +22,9 @@ public class DistributedLockImp implements DistributedLock {
     public boolean lock(String key, String value, long timeoutMillis) {
         log.info("Locking key: {}, value: {}, timeout: {}", key, value, timeoutMillis);
 
+        // implement exponential backoff with jitter
+        // https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/
+
         long maxWaitMillis = 3000; // tối đa 3 giây chờ để thử lại
         long startTime = System.currentTimeMillis();
 
